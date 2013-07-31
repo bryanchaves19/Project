@@ -69,8 +69,6 @@ namespace GUI
             txtNumMarca.Enabled = false;
             txtNumUnificacion.Enabled = false;
             this.edicion = true;
-            
-
         }
         /// <summary>
         /// Método para cargar el combobox CodigoEmpleado con los codigos existentes en la base de datos.
