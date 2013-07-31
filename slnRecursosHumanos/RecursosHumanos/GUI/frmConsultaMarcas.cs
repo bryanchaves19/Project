@@ -221,7 +221,7 @@ namespace GUI
                 {
                     idEmpleado = this.cmbCodigo.SelectedValue.ToString();
                 }
-
+                
                 if (this.cmbDepartamento.SelectedValue == null)
                 {
                     departamento = "";

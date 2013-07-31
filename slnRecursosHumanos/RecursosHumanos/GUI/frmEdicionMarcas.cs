@@ -85,17 +85,17 @@ namespace GUI
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            int idUnificacion = 0;
+           int idUnificacion = 0;
             
-            string codigo = (cmbCodigo.SelectedItem.ToString());
+            
             this.fechaMarca = dtpFecha.Value.Date;
-            int numMarca = int.Parse(txtNumMarca.Text);
+            
             //
            
             string estado = Convert.ToString(txtEstadoMarca.Text);
             if (edicion == false)
             {
-                idUnificacion = int.Parse(txtNumUnificacion.Text);
+                string codigo = (cmbCodigo.SelectedValue.ToString());
                
                 if (rdoSalida.Checked == true)
                 {
@@ -111,16 +111,19 @@ namespace GUI
                 }
             }
             else {
+                int Unificacion = int.Parse(txtNumUnificacion.Text);
+                int numMarca = int.Parse(txtNumMarca.Text);
+                string codigo2 = (cmbCodigo.SelectedItem.ToString());
                 if (rdoSalida.Checked == true)
                 {
                     
-                    MarcaL = new MarcaL(numMarca, idUnificacion, codigo, estado, "Salida", fechaMarca, "Proyecto", DateTime.Now, "Proyecto", DateTime.Now, "Sí");
+                    MarcaL = new MarcaL(numMarca, Unificacion, codigo2, estado, "Salida", fechaMarca, "Proyecto", DateTime.Now, "Proyecto", DateTime.Now, "Sí");
 
 
                 }
                 else
                 {
-                    MarcaL = new MarcaL(numMarca, idUnificacion, codigo, estado, "Salida", fechaMarca, "Proyecto", DateTime.Now, "Proyecto", DateTime.Now, "Sí"); 
+                    MarcaL = new MarcaL(numMarca, idUnificacion, codigo2, estado, "Salida", fechaMarca, "Proyecto", DateTime.Now, "Proyecto", DateTime.Now, "Sí"); 
 
                 }
             
